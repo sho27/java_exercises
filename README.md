@@ -1,1 +1,1 @@
-Solution of Coding Exercises - in 28 minutes - Java Programming
+Solution of Coding Exercises - Course Udemy - in 28 minutes - Java Programming
