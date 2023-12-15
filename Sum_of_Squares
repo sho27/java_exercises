@@ -1,4 +1,4 @@
-/*Coding Exercise 7 - Sum of Sqauers of first N numbers*/
+/*Coding Exercise 7 - Sum of Squares of first N numbers*/
 
 public class SumOfSquares {
     public long calculateSumOfSquares(int n) {
@@ -6,7 +6,7 @@ public class SumOfSquares {
     		return -1;
     	}
     	
-    	int sum = 0;    	
+    	long sum = 0;    	
     	for(int i=1; i<=n; i++) {
     		sum += i*i;
     	}
