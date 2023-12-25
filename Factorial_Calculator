@@ -1,0 +1,17 @@
+* Coding Exercise 17 - Calculate Factorial of a Number */
+
+public class FactorialCalculator {
+
+    public int calculateFactorial(int number) {
+    	if (number < 0) {
+    		return -1;
+    	}
+    	
+    	int fact = 1;
+    	for(int i = number; i >= 2; i--) {
+    		fact *= i;
+    	}
+        return fact;
+    }
+
+}
