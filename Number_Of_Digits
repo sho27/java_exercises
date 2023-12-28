@@ -1,0 +1,22 @@
+/* Coding Exercise 19 - Find number of digits in a number */
+
+public class NumberUtils {
+
+   public int getNumberOfDigits(int number) {
+       		if (number < 0) {
+			return -1;
+		}
+		
+		int count = 0;
+		
+		if (number == 0) {
+			count = 1;
+		}
+		
+		while (number > 0) {
+			count++;
+			number /= 10;
+		}
+		return count;
+    }
+}
