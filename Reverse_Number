@@ -1,0 +1,21 @@
+/* Coding Exercise 21 - Reverse a number */
+
+public class NumberUtils {
+
+    public int reverseNumber(int number) {
+        if(number < 0) {
+			 return -1;
+		 }
+		 
+		 if (number == 0) {
+			 return 0;
+		 }
+		 
+		 int reverse = 0;
+		 while (number > 0) {
+			 reverse = reverse * 10 + number % 10;
+			 number /= 10;
+		 }
+		 return reverse;
+    }
+}
