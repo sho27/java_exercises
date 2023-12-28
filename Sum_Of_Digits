@@ -1,0 +1,21 @@
+/* Coding Exercise 20 - Calculate sum of digits of a number */
+
+public class NumberUtils {
+
+    public int getSumOfDigits(int number) {
+        if (number < 0) {
+    		return -1;
+    	}
+    	
+    	if (number == 0) {
+    		return 0;
+    	}
+    	
+    	int sum = 0;
+    	while(number > 0) {
+    		sum = sum + number % 10;
+    		number /= 10;
+    	}
+    	return sum;
+    }
+}
