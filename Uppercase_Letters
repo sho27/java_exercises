@@ -1,0 +1,19 @@
+/* Coding Exercise 24 - Count uppercase letters in a String */
+
+public class StringMagic {
+    
+    public int countUppercaseLetters(String str) {
+      		if (str.isEmpty()) {
+			return 0;
+		}
+		
+		int count = 0;
+		for (int i=0; i<str.length(); i++) {
+			char ch = str.charAt(i);
+			if(Character.isUpperCase(ch)) {
+				count++;
+			}
+		}
+        return count;  
+    }
+}
