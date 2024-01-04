@@ -1,0 +1,17 @@
+/* Coding Exercise 25 - Does a String have two consecutive identical */
+
+public class StringMagic {
+
+    public boolean hasConsecutiveDuplicates(String str) {
+        if(str.isEmpty()) {
+    		return false;
+    	}
+    	
+    	for(int i=0; i<str.length()-1; i++) {
+    		if(str.charAt(i) == str.charAt(i+1)) {
+    			return true;
+    		}
+    	}
+       return false; 
+    }
+}
