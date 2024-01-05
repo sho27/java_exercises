@@ -1,0 +1,16 @@
+/* Coding Exercise 26 - Right most digit in a String */
+
+public class StringMagic {
+    public int getRightmostDigit(String str) {
+        if(str.isEmpty()) {
+			return -1;
+		}
+		
+		for(int i=str.length()-1; i>=0; i--) {
+			if(Character.isDigit(str.charAt(i))) {
+				return Character.getNumericValue(str.charAt(i));
+			}
+		}
+     return -1; 
+    }
+}
