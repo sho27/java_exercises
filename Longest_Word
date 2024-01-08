@@ -1,0 +1,23 @@
+/* Coding Exercise 27 - Longest Word Finder */
+
+public class StringMagic {
+
+    public String findLongestWord(String sentence) {
+        if(sentence.isEmpty()) {
+			return "";
+		}
+		
+		String[] strArray = sentence.split(" ");
+		int length = 0;
+		String str = "";
+		
+		for(String str1 : strArray) {
+			if(str1.length() > length) {
+				length = str1.length();
+				str = str1;
+			}
+		}
+        return str;
+        
+    }
+}
