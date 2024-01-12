@@ -1,0 +1,28 @@
+/* Coding Exercise 29 - Find Second Largest Element */
+
+public class ArrayMagic {
+    
+     
+    public int findSecondLargestElement(int[] array) {
+        if(array.length < 2) {
+    		return -1;
+    	}
+    	
+    	int max = Integer.MIN_VALUE;
+    	int second_max = Integer.MIN_VALUE;
+    	
+    	for(int value: array) {
+    		if(value > max) {
+    			second_max = max;
+    			max = value;
+    		} else if(value > second_max && value != max) {
+    			second_max = value;
+    		}
+    	}
+    	
+    	if(second_max == Integer.MIN_VALUE) {
+    		return -1;
+    	}
+        return second_max;
+    }
+}
