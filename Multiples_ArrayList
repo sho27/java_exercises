@@ -1,0 +1,21 @@
+/* Coding Exercise 34 - Return ArrayList with multiples of a given number less than a specified limit */
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class NumberMagic {
+    public List<Integer> determineMultiples(int number, int limit) {
+        ArrayList<Integer> list = new ArrayList<>();
+    	
+    	if(number <= 0 || limit <= 0) {
+    		return list;
+    	}
+    	
+    	for(int i=number; i<limit; i++) {
+    		if(i%number == 0) {
+    			list.add(i);
+    		}
+    	}
+    	return list;
+    }
+}
