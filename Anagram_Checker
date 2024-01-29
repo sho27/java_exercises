@@ -1,0 +1,23 @@
+/* Coding Exercise 37 - Anagram Checker */
+
+import java.util.Arrays;
+
+public class StringMagic {
+
+    public boolean areAnagrams(String str1, String str2) {
+    
+        if(str1 == null || str2 == null) {
+    		return false;
+    	}
+    	
+    	if(str1.length() == str2.length()) {
+    	  char[] chStr1 = str1.toLowerCase().toCharArray();
+    	  char[] chStr2 = str2.toLowerCase().toCharArray();
+    		Arrays.sort(chStr1);
+    		Arrays.sort(chStr2);
+    		return Arrays.equals(chStr1, chStr2);    		
+    	}
+    	
+    	return false;        
+    }
+}
