@@ -1,0 +1,25 @@
+/* Coding Exercise 39 - Word Reverser */
+
+public class StringMagic {
+
+    public String reverseWordsInSentence(String sentence) {
+         if(sentence == null) {
+			   return "INVALID";
+		   }
+		   
+		   if(sentence.isEmpty()) {
+			   return "";
+		   }
+		   
+		   String[] spiltSentence = sentence.split(" ");
+		   StringBuilder reverse = new StringBuilder();
+		   
+		   for(String st: spiltSentence) {
+		     StringBuilder newSentence = new StringBuilder();
+			   newSentence.append(st);
+			   reverse.append(newSentence.reverse() + " ");
+		   }
+		   
+		   return reverse.toString().trim();
+    }
+}
