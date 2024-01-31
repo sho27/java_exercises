@@ -1,0 +1,33 @@
+/*Coding Exercise 38 - Is Hexadecimal String? */
+
+import java.util.*;
+
+public class MyString {
+
+    public String str;
+
+    public MyString(String str) {
+        this.str = str;
+    }
+    
+   	    public boolean isHexadecimalChar(char ch) {		
+	    	if((ch >= 'a' && ch <= 'f') || (ch >= 'A' && ch <= 'F')) {
+	    			return true;
+	    		}
+	    	return false;
+	    }
+
+	    public boolean isHexadecimal() {
+	    	if(str == null || str.length()==0) {
+	    		return false;
+	    	}
+	    	
+	    	char[] hexaCh = str.toCharArray();
+	    	for(char ch: hexaCh) {
+	    		if(!isHexadecimalChar(ch) && !Character.isDigit(ch)) {
+	    			return false;
+	    		}
+	    	}
+	    	return true;
+	    }
+}
