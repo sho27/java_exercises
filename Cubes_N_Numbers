@@ -1,0 +1,12 @@
+/*Coding Exercise 41 - Get Cubes of First N Numbers */
+
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.List;
+
+public class FunctionalProgrammingMagic {
+
+    public static List<Integer> getCubesOfFirstNNumbers(int n) {
+        return IntStream.range(1, n+1).map(E -> E*E*E).boxed().collect(Collectors.toList());
+    }
+}
