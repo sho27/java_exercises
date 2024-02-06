@@ -1,0 +1,15 @@
+/* Coding Exercise 44 - Find Max Even Number */
+
+import java.util.List;
+import java.util.Optional;
+
+public class FunctionalProgrammingMagic {
+
+    public static int findMaxEvenNumber(List<Integer> numbers) {
+        if(numbers == null) {
+            return 0;
+        }        
+        
+        return numbers.stream().filter(E -> E%2 == 0).max((num1, num2) -> Integer.compare(num1, num2)).orElse(0);
+    }
+}
